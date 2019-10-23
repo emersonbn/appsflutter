@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(height: 25.0),
                 passwordField,
                 SizedBox(
-                  height: 38.0,
+                  height: 35.0,
                 ),
                 loginButon,
                 SizedBox(
