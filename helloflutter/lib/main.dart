@@ -3,13 +3,18 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:helloflutter/route_generate.dart';
+//import 'package:oauth1/oauth1.dart';
 
-import 'app/pages/login.dart';
+//import 'app/pages/login.dart';
+//import 'app/pages/starting.dart';
 
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+   // define platform (server)
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +32,9 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.green,
           ),
-       home: MyHomePage(title: 'Flutter Login')
+       //home: Starting(title: 'Starting'),
+       initialRoute: '/',
+       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

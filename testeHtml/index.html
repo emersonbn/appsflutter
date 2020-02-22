@@ -1,0 +1,42 @@
+<html>
+<head>
+    <!--<script type="text/javascript" src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+    <script type="text/javascript" src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+    -->
+    <script type="text/javascript" src="oauth-1.0a.js"></script>
+</head>
+
+<body>
+    <script>
+    var oauth = OAuth({
+        consumer: {
+            'public': 'b1203a09-eb05-4d23-be48-60ca12a33a9c', // nome do aplicativo que você criou
+            'secret': '26074c3e-283e-43e0-8c85-4b93d9f0a184f6bd6ef3-afcd-4232-9a62-f965b0611f21' // nome do aplicativo que você criou
+        },
+            signature_method: 'HMAC-SHA1'
+        });
+
+        var request_data = {
+            url: 'http://testefluig.lowcucar.com.br:8098/tasks/api/v1', // Altere o endereço da API desejada
+            method: 'GET',
+            data: {}
+        };
+        var token = {
+            'public': '11ac96cc-68d4-4f53-8dd6-9f6f5007dae8', // Seu access token
+            'secret': '8c589407-327c-4d1e-a755-2fe3ae6dad433318fc43-376f-48bd-b4fe-057b2a574a73' // Seu token secret
+        };
+        $.ajax({
+            url: request_data.url,
+            type: request_data.method,
+            data: request_data.data,
+            headers: oauth.toHeader(oauth.authorize(request_data, token))
+        })
+        .done(function(data) {
+            console.log(data); // resposta do serviço executado
+        });    
+    </script>
+
+</body>
+
+</html>
