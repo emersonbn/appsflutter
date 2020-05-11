@@ -45,7 +45,11 @@ class ProgramcaoItem extends StatelessWidget {
                     fontWeight: FontWeight.w300
                   ),
                   ),
-                  Text(programacao.data.toString(),
+                  Text(programacao.dataFormat,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300
+                  ),
+                  ), Text(programacao.hours,
                   style: TextStyle(
                     fontWeight: FontWeight.w300
                   ),
