@@ -1,4 +1,7 @@
+
+import 'package:controller_financ/pages/geral.dart';
 import 'package:controller_financ/pages/login.dart';
+import 'package:controller_financ/pages/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:controller_financ/pages/paga1.dart';
@@ -14,12 +17,14 @@ class RouteGenerator {
     //final args = settings.arguments;
 
     switch (settings.name) {
-      case '/login':
-        return CupertinoPageRoute(builder: (_) => Login());
+      case '/Login':
+        return CupertinoPageRoute(builder: (_) => LoginScreen());
       case '/':
         return CupertinoPageRoute(builder: (_) => Home());
       case '/Page1':
-      return CupertinoPageRoute(builder: (_) => Paga1());
+        return CupertinoPageRoute(builder: (_) => Paga1());
+      case '/Geral':
+        return CupertinoPageRoute(builder: (_) => Geral());
 
       default:
         return _erroRoute();

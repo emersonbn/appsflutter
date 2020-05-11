@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "flutter_exercicios",
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"totvsLanguageServer.welcomePage": false,
+		"totvsLanguageServer.askEncodingChange": true
+	}
+}

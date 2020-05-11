@@ -6,7 +6,7 @@ import 'package:controller_financ/generation_route.dart';
 //import 'pages/saldo.dart';
 
 void main() => runApp(MaterialApp(
-      //debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,7 +20,7 @@ void main() => runApp(MaterialApp(
         primarySwatch: Colors.purple,
       ),
       //home: Starting(title: 'Starting'),
-      initialRoute: '/login',
+      initialRoute: '/Login',
       onGenerateRoute: RouteGenerator.generateRoute,
     ));
 
