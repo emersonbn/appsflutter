@@ -27,6 +27,7 @@ class ProgramacaoData {
 
   ProgramacaoData.fromDocument(DocumentSnapshot snapshot){
     initializeDateFormatting('pt-BR', null);
+    
     id = snapshot.documentID;
     titulo = snapshot.data['titulo'];
     descricao = snapshot.data['descricao'];

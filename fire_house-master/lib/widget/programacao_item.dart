@@ -11,7 +11,9 @@ class ProgramcaoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildContent(DocumentSnapshot snapshot) {
+
+    
+     Widget _buildContent(DocumentSnapshot snapshot) {
 
       ProgramacaoData progrmation = ProgramacaoData.fromDocument(snapshot);
 
@@ -62,7 +64,7 @@ class ProgramcaoItem extends StatelessWidget {
         ),
       );
     }
-  
+   
     return Card(
         margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         child: StreamBuilder<DocumentSnapshot>(
@@ -79,6 +81,7 @@ class ProgramcaoItem extends StatelessWidget {
                 return _buildContent(snapshot.data);
               }
             })
-        );
+    );
   }
+  
 }
